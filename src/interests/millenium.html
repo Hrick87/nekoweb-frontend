@@ -1,31 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For Your Eyes Only</title>
-    <!-- General  Styling-->
-    <link rel="stylesheet" href="../CSS/style.css{{ nocache }}"/>
-    
-    <!-- Mobile portrait mode only-->
-    <link rel="stylesheet" media="only screen and (orientation: portrait)" href="../CSS/portraitStyle.css{{ nocache }}"/>
-
-    <!-- Mobile landscape mode only-->
-    <link rel="stylesheet" media="only screen and (orientation: landscape)" href="../CSS/landscapeStyle.css{{ nocache }}"/>
-    
-    <link rel="stylesheet" href="../CSS/milleniumStyle.css{{ nocache }}"/>
-</head>
-<body>
-    <header>
-        <div>
-            <ul id="navigationBar">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../contact.html">Contact</a></li>
-                <li><a href="../about.html">About</a></li>
-            </ul>
-        </div>
-    </header>
+---
+layout: navigationBar.njk
+CSSNesting: ../CSS/
+pageName: millenium
+pageNesting: ../
+---
     <div id="banner">
         <img src="../graphics/apocolypse_banner.gif" alt="RPG-BS"/>
     </div>
@@ -62,5 +40,3 @@
             will be announced and linked here.
         </p>
     </div>
-</body>
-</html>

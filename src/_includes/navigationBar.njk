@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For Your Eyes Only</title>
     
     <!-- General styling-->
-    <link rel="stylesheet" href="CSS/style.css{{ nocache }}"/>
+    <link rel="stylesheet" href="{{ CSSNesting }}style.css{{ nocache }}"/>
     <!-- Mobile portrait mode only-->
-    <link rel="stylesheet" media="only screen and (orientation: portrait)" href="CSS/portraitStyle.css{{ nocache }}"/>
+    <link rel="stylesheet" media="only screen and (orientation: portrait)" href="{{ CSSNesting }}portraitStyle.css{{ nocache }}"/>
     <!-- Mobile landscape mode only-->
-    <link rel="stylesheet" media="only screen and (orientation: landscape)" href="CSS/landscapeStyle.css{{ nocache }}"/>
+    <link rel="stylesheet" media="only screen and (orientation: landscape)" href="{{ CSSNesting }}landscapeStyle.css{{ nocache }}"/>
     
     <!-- Specific to page styling -->
-    {{ content | safe }}
-</head>
+    <link rel="stylesheet" href="{{ CSSNesting }}{{pageName}}Style.css{{ nocache }}"/>
+    <link rel="stylesheet" media="only screen and (orientation: portrait)" href="{{ CSSNesting }}{{pageName}}PortraitStyle.css{{ nocache }}"/>
 <body>
     <header>
         <div>
             <ul id="navigationBar">
-                <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a class="active" href="{{ pageNesting }}index.html">Home</a></li>
+                <li><a href="{{ pageNesting }}contact.html">Contact</a></li>
+                <li><a href="{{ pageNesting }}about.html">About</a></li>
             </ul>
         </div>
     </header>

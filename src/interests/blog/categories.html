@@ -1,0 +1,25 @@
+---
+pagination:
+  data: collections.categories
+  size: 1
+  alias: category
+permalink: "interests/blog/categories/{{ category | slugify }}/index.html"
+layout: navigationBar.njk
+CSSNesting: ../../../../CSS/
+pageName: blog
+pageNesting: ../../../../
+---
+<div id="main">
+    <div id="text-box">
+        <h2>Category: {{ category }}</h2>
+
+        {% set posts = collections.post | filterByCategory(category) %}
+
+        {%- for post in posts | reverse -%}
+            <p>
+                {{ post.data.title }} - {{ post.date }}<br/>
+                {% excerpt post %}
+            </p>
+        {%- endfor -%}
+    </div>
+</div>

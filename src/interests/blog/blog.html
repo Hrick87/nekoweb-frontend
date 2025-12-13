@@ -1,0 +1,19 @@
+---
+layout: navigationBar.njk
+CSSNesting: ../../CSS/
+pageName: blog
+pageNesting: ../../
+---
+    <div id="main">
+        <div id="text-box">
+            <h1>Blog Posts</h1>
+            <ul>
+                {%- for post in collections.post | reverse -%}
+                    <p>
+                        {{ post.data.title }} - {{ post.date }}<br/>
+                        {% excerpt post %}
+                    </p>
+                {%- endfor -%}
+            </ul>
+        </div>
+    </div>

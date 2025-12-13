@@ -1,38 +1,9 @@
 ---
 layout: navigationBar.njk
-nesting: "./"
+CSSNesting: CSS/
+pageName: home
+pageNesting: ./
 ---
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For Your Eyes Only</title>
-    
-    <!-- General styling-->
-    <link rel="stylesheet" href="CSS/style.css{{ nocache }}"/>
-    <!-- Mobile portrait mode only-->
-    <link rel="stylesheet" media="only screen and (orientation: portrait)" href="CSS/portraitStyle.css{{ nocache }}"/>
-
-    <!-- Mobile landscape mode only-->
-    <link rel="stylesheet" media="only screen and (orientation: landscape)" href="CSS/landscapeStyle.css{{ nocache }}"/>
-    
-    <!-- Specific to page styling -->
-    <link rel="stylesheet" href="CSS/homeStyle.css{{ nocache }}"/>
-    <link rel="stylesheet" media="only screen and (orientation: portrait)" href="CSS/homePortraitStyle.css{{ nocache }}"/>
-</head>
-<body>
-    <header>
-        <div>
-            <ul id="navigationBar">
-                <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </div>
-    </header>
     <div class="image-row">
         <a id="dice_millenium_link" href="interests/millenium.html">
             <img id="dice" src="graphics/Dice.png" alt="dice set"/>
@@ -48,5 +19,3 @@ nesting: "./"
             <img id="journal" src="graphics/journal.png" alt="journal"/>
         </a>
     </div>
-</body>
-</html>
