@@ -4,12 +4,21 @@
   <subtitle></subtitle>
   <link href="https://foryoureyesonly.nekoweb.org/feed.xml" rel="self"/>
   <link href="https://foryoureyesonly.nekoweb.org/"/>
-  <updated>2026-01-09T00:00:00Z</updated>
+  <updated>2026-01-10T00:00:00Z</updated>
   <id>https://foryoureyesonly.nekoweb.org/</id>
   <author>
     <name>Hunter</name>
     <email></email>
   </author>
+  
+  <entry>
+    <title>Somehow forgot I&#39;d need wires for my Raspberry Pi</title>
+    <link href="https://foryoureyesonly.nekoweb.org/posts/2026/01/raspberryPi.html"/>
+    <updated>2026-01-10T00:00:00Z</updated>
+    <id>https://foryoureyesonly.nekoweb.org/posts/2026/01/raspberryPi.html</id>
+    <content type="html">&lt;p&gt;Its gonna take around 2 weeks for all the cables and power supply stuff to show up. Until then there won&#39;t be a comment section. I think I had some of this stuff at my old home but must&#39;ve forgotten it or lost it because its not in the box with my raspberry pi. I definitely used the Pi for some small project years ago. Whoops! Oh well. In the meantime I&#39;ll look into fleshing out my music page I suppose. Looking forward to having everything streamable from there!&lt;/p&gt;
+</content>
+  </entry>
   
   <entry>
     <title>Comment Section Feature is going well</title>
