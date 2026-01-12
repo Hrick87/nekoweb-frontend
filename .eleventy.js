@@ -6,7 +6,9 @@ module.exports = function (eleventyConfig) {
   // This will stop the default behaviour of foo.html being turned into foo/index.html
   eleventyConfig.addGlobalData("permalink", "{{ page.filePathStem }}.html");
 
-  eleventyConfig.addPassthroughCopy("src/graphics", "src/.well-known");
+  eleventyConfig.addPassthroughCopy("src/graphics");
+  eleventyConfig.addPassthroughCopy("src/CSS");
+  eleventyConfig.addPassthroughCopy("src/.well-known");
 
   eleventyConfig.setTemplateFormats(["html", "njk", "txt", "js", "css", "xml", "json", "md"]);
 
