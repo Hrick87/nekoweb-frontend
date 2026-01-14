@@ -1,24 +1,39 @@
-#banner img {
-    height: 21em;
-    width: 100%;
-    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+.mainContainer {
+    display: grid;
+    grid-template-columns: auto;
+    place-content: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#main h1 {
+.banner img {
+    /* -webkit-mask-image: radial-gradient(
+        ellipse at center,
+        black 60%,
+        transparent 100%
+    );
+
+    mask-image: radial-gradient(
+        ellipse at center,
+        black 60%,
+        transparent 100%
+    ); */
+}
+
+.text-box h1 {
     text-align: center;
 }
 
-#main h2 {
+.text-box h2 {
     margin-left: 2em;
 }
 
-#main p {
+.text-box p {
     margin-left: 4em;
     margin-right: 1.5em;
 }
 
-#featureList {
+.featureList {
     margin-left: 4em;
     margin-right: 1.5em;
 }
