@@ -1,18 +1,50 @@
-#main {
-    text-align: center;
+/* centers all child content */
+.mainContainer {
+    border-radius: 12px;
+    overflow: hidden; /* clips child containers so that rounding can happen */
+    font-size: 1.25em;
+    display: flex;
+    justify-items: stretch;
+    justify-content: center;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vw;
+    background: rgba(0, 0, 0, 0.727);  /* semi-transparent black */
+    color: rgb(198, 198, 198);    /* Text color */
 }
 
-#text-box {
-    background: rgba(0, 0, 0, 0.6);  /* semi-transparent black */
-    color: white;                    /* text color */
-    border-radius: 10px;             /* rounded corners */
-    font-size: fit-content;              /* shrink to text */
-    padding: 1.5em;                  /* space inside the box */
-    margin-top: 2em;                     /* space around the box */
-    max-width: 100vw;
-    height: 70vh;
-    max-height: 70vh;
-    font-size: 1.25em;
+/* centers text box */
+.text-box {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+/* centers title */
+.text-box h1 {
+    text-align: center;
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: .5em;
+}
+
+.text-box h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: .5em;
+}
+
+.text-box p {
+    text-align: center;
+    color: rgb(174, 12, 44);
+    margin-top: 0; /* get rid of space between each section and its paragraph */
+    line-height: 1.1;
+    margin-bottom: 0;
 }
 
 /* Background Image */
