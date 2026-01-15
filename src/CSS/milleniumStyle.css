@@ -1,43 +1,50 @@
 /* centers all child content */
 .mainContainer {
-    display: grid;
-    grid-template-columns: auto;
-    place-content: center;
+    display: flex;
+    flex-direction: column;
     margin-left: auto;
     margin-right: auto;
-    justify-content: stretch;
+    justify-content: center;
+    align-items: stretch;
     width: 50%;
 }
 
-/* centers img */
 .banner {
     display: flex;
     justify-content: center;
-    align-items: center;
+    justify-items: center;
+    width: 100%;
+    height: 15rem;
 }
 
 /* gives image a gradient */
 .banner img {
-    -webkit-mask-image: radial-gradient(
-        ellipse at center,
-        black 30%,
-        transparent 100%
-    );
+    /* dramatic fade on sides and bottom */
+    -webkit-mask-image: 
+        linear-gradient(to right, transparent, black 20%, black 80%, transparent), 
+        linear-gradient(to bottom, black 70%, transparent);
+    -webkit-mask-composite: destination-in;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    
+    mask-image: 
+        linear-gradient(to right, transparent, black 20%, black 80%, transparent), 
+        linear-gradient(to bottom, black 70%, transparent);
+    mask-composite: intersect;
+    mask-repeat: no-repeat;
+    mask-size: 100% 100%;
 
-    mask-image: radial-gradient(
-        ellipse at center,
-        black 30%,
-        transparent 100%
-    );
-
-    height: 50%;
     width: 100%;
+    height: 100%;
+    object-fit: fill;
 }
 
 /* centers text box */
 .text-box {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    /*width: 50rem;*/
 }
 
 /* centers Millenium title */
@@ -60,6 +67,7 @@
     margin-top: 0; /* get rid of space between each section and its paragraph */
     margin-left: 4em;
     margin-right: 4em;
+    line-height: 1.1;
 }
 
 /* creates tabbing */
@@ -68,6 +76,7 @@
     margin-top: 0; /* get rid of space between each section and its paragraph */
     margin-left: 2.5em;
     margin-right: 2.5em;
+    line-height: 1.1;
 }
 
 body {
