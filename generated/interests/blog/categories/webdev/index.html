@@ -7,15 +7,15 @@
     <title>For Your Eyes Only</title>
     
     <!-- General styling-->
-    <link rel="stylesheet" href="../../../../CSS/style.css?nocache=1769291534980"/>
+    <link rel="stylesheet" href="../../../../CSS/style.css?nocache=1769292175432"/>
     <!-- Mobile portrait mode only-->
-    <link rel="stylesheet" media="only screen and (orientation: portrait)" href="../../../../CSS/portraitStyle.css?nocache=1769291534980"/>
+    <link rel="stylesheet" media="only screen and (orientation: portrait)" href="../../../../CSS/portraitStyle.css?nocache=1769292175432"/>
     <!-- Mobile landscape mode only-->
-    <link rel="stylesheet" media="only screen and (orientation: landscape)" href="../../../../CSS/landscapeStyle.css?nocache=1769291534980"/>
+    <link rel="stylesheet" media="only screen and (orientation: landscape)" href="../../../../CSS/landscapeStyle.css?nocache=1769292175432"/>
     
     <!-- Specific to page styling -->
-    <link rel="stylesheet" href="../../../../CSS/categoriesStyle.css?nocache=1769291534980"/>
-    <link rel="stylesheet" media="only screen and (orientation: portrait)" href="../../../../CSS/categoriesPortraitStyle.css?nocache=1769291534980"/>
+    <link rel="stylesheet" href="../../../../CSS/categoriesStyle.css?nocache=1769292175432"/>
+    <link rel="stylesheet" media="only screen and (orientation: portrait)" href="../../../../CSS/categoriesPortraitStyle.css?nocache=1769292175432"/>
 </head>
 <body>
     <header>
@@ -42,134 +42,48 @@
                 <p>Its gonna take around 2 weeks for all the cables and power supply stuff to show up. Until then there won't be a comment section. I think I had some of this stuff at my old home but must've forgotten it or lost it because its not in the box with my raspberry pi. I definitely used the Pi for some small project years ago. Whoops! Oh well. In the meantime I'll look into fleshing out my music page I suppose. Looking forward to having everything streamable from there!</p>
 
             </p>
-            <section id="comments">
-              <h2>Comments</h2>
-              <div id="comment-list"></div>
-              <form id="comment-form">
-                  <input name="author" placeholder="Name" required />
-                  <textarea name="text" required></textarea>
-                  <button type="submit">Post</button>
-              </form>
-            </section>
-            </br>
-            <script>
-              // TODO Change for production
-              const API_BASE = "http://127.0.0.1:5000";
-              // const API_BASE = Raspberry Pi IP address/comments
-              const postId = window.location.pathname;
-
-              fetch(`${API_BASE}/comments?post=${postId}`)
-              .then(r => r.json())
-              .then(comments => {
-                  document.getElementById("comment-list").innerHTML =
-                  comments.map(c => `<p><b>${c.author}</b>: ${c.text}</p>`).join("");
-              });
-
-              document.getElementById("comment-form").addEventListener("submit", async e => {
-              e.preventDefault();
-              const form = e.target;
-
-              await fetch(`${API_BASE}/comments`, {
-                  method: "POST",
-                  headers: {"Content-Type": "application/json"},
-                  body: JSON.stringify({
-                  post: postId,
-                  author: form.author.value,
-                  text: form.text.value
-                  })
-              });
-              location.reload();
-              });
-            </script><h2>Comment Section Feature is going well</h2>
+            <section class="comments" data-post-id="/posts/2026/01/raspberryPi.html">
+                    <h2>Comments</h2>
+                    <div class="comment-list"></div>
+                    <form class="comment-form">
+                        <input type="text" maxlength="40" class="comment-author" name="author" placeholder="Name" required />
+                        <textarea type="text" maxlength="600" class="comment-text" name="text" placeholder="600 characters max" required></textarea>
+                        <button class="comment-post" type="submit">Post</button>
+                    </form>
+                </section>
+                </br><h2>Comment Section Feature is going well</h2>
             <h3>January 9, 2026</h3>
             <p>
                 <p>Hey ya'll, I'm getting close to having a proper comment section on my blog. I just need to move my server side files over to my raspberry pi and configure it a bit to get things going. Pretty soon as long as my place has power, you'll be able to post comments here! Typing that just made me realize I should probably find a way to cache the comments here so that already made comments are rendered client side maybe? This would be for if my raspberry pi went down... though tbh that might take up way too much space on NekoWeb's hosting service. idk something to think about. later</p>
 
             </p>
-            <section id="comments">
-              <h2>Comments</h2>
-              <div id="comment-list"></div>
-              <form id="comment-form">
-                  <input name="author" placeholder="Name" required />
-                  <textarea name="text" required></textarea>
-                  <button type="submit">Post</button>
-              </form>
-            </section>
-            </br>
-            <script>
-              // TODO Change for production
-              const API_BASE = "http://127.0.0.1:5000";
-              // const API_BASE = Raspberry Pi IP address/comments
-              const postId = window.location.pathname;
-
-              fetch(`${API_BASE}/comments?post=${postId}`)
-              .then(r => r.json())
-              .then(comments => {
-                  document.getElementById("comment-list").innerHTML =
-                  comments.map(c => `<p><b>${c.author}</b>: ${c.text}</p>`).join("");
-              });
-
-              document.getElementById("comment-form").addEventListener("submit", async e => {
-              e.preventDefault();
-              const form = e.target;
-
-              await fetch(`${API_BASE}/comments`, {
-                  method: "POST",
-                  headers: {"Content-Type": "application/json"},
-                  body: JSON.stringify({
-                  post: postId,
-                  author: form.author.value,
-                  text: form.text.value
-                  })
-              });
-              location.reload();
-              });
-            </script><h2>Just found out about deploy2nekoweb</h2>
+            <section class="comments" data-post-id="/posts/2026/01/webDevUpdate2.html">
+                    <h2>Comments</h2>
+                    <div class="comment-list"></div>
+                    <form class="comment-form">
+                        <input type="text" maxlength="40" class="comment-author" name="author" placeholder="Name" required />
+                        <textarea type="text" maxlength="600" class="comment-text" name="text" placeholder="600 characters max" required></textarea>
+                        <button class="comment-post" type="submit">Post</button>
+                    </form>
+                </section>
+                </br><h2>Just found out about deploy2nekoweb</h2>
             <h3>December 28, 2025</h3>
             <p>
                 <p>So I was under the impression that if I wanted to update my site immediately without importing a zip everytime I'd need to use nekoGit and subscribe monthly. Turns out theres an API with all sorts of nice features. That means I can post like this and have the post up in a matter of minutes. Thank god. Oh also dont forget to subscribe to my RSS feed, so you can see quality content like this.</p>
 
             </p>
-            <section id="comments">
-              <h2>Comments</h2>
-              <div id="comment-list"></div>
-              <form id="comment-form">
-                  <input name="author" placeholder="Name" required />
-                  <textarea name="text" required></textarea>
-                  <button type="submit">Post</button>
-              </form>
-            </section>
-            </br>
-            <script>
-              // TODO Change for production
-              const API_BASE = "http://127.0.0.1:5000";
-              // const API_BASE = Raspberry Pi IP address/comments
-              const postId = window.location.pathname;
-
-              fetch(`${API_BASE}/comments?post=${postId}`)
-              .then(r => r.json())
-              .then(comments => {
-                  document.getElementById("comment-list").innerHTML =
-                  comments.map(c => `<p><b>${c.author}</b>: ${c.text}</p>`).join("");
-              });
-
-              document.getElementById("comment-form").addEventListener("submit", async e => {
-              e.preventDefault();
-              const form = e.target;
-
-              await fetch(`${API_BASE}/comments`, {
-                  method: "POST",
-                  headers: {"Content-Type": "application/json"},
-                  body: JSON.stringify({
-                  post: postId,
-                  author: form.author.value,
-                  text: form.text.value
-                  })
-              });
-              location.reload();
-              });
-            </script></ul>
+            <section class="comments" data-post-id="/posts/2025/12/webdevUpdate.html">
+                    <h2>Comments</h2>
+                    <div class="comment-list"></div>
+                    <form class="comment-form">
+                        <input type="text" maxlength="40" class="comment-author" name="author" placeholder="Name" required />
+                        <textarea type="text" maxlength="600" class="comment-text" name="text" placeholder="600 characters max" required></textarea>
+                        <button class="comment-post" type="submit">Post</button>
+                    </form>
+                </section>
+                </br></ul>
     </div>
 </div>
+<script src="../../scripts/javaScript/blogComments.js"></script>
 </body>
 </html>
