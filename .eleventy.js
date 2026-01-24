@@ -3,13 +3,17 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function (eleventyConfig) {
 
+  // Ignore TypeScript files - don't copy them to output
+  eleventyConfig.ignores.add("src/scripts/typeScript/**");
+  eleventyConfig.ignores.add("src/scripts/tsconfig.json");
+
   // This will stop the default behaviour of foo.html being turned into foo/index.html
   eleventyConfig.addGlobalData("permalink", "{{ page.filePathStem }}.html");
 
   eleventyConfig.addPassthroughCopy("src/graphics");
   eleventyConfig.addPassthroughCopy("src/CSS");
   eleventyConfig.addPassthroughCopy("src/.well-known");
-  eleventyConfig.addPassthroughCopy("src/scripts");
+  eleventyConfig.addPassthroughCopy("src/scripts/javaScript");
 
   eleventyConfig.setTemplateFormats(["html", "njk", "txt", "js", "css", "xml", "json", "md"]);
 

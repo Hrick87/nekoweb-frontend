@@ -7,15 +7,15 @@
     <title>For Your Eyes Only</title>
     
     <!-- General styling-->
-    <link rel="stylesheet" href="../../CSS/style.css?nocache=1768526528533"/>
+    <link rel="stylesheet" href="../../CSS/style.css?nocache=1769285859392"/>
     <!-- Mobile portrait mode only-->
-    <link rel="stylesheet" media="only screen and (orientation: portrait)" href="../../CSS/portraitStyle.css?nocache=1768526528533"/>
+    <link rel="stylesheet" media="only screen and (orientation: portrait)" href="../../CSS/portraitStyle.css?nocache=1769285859392"/>
     <!-- Mobile landscape mode only-->
-    <link rel="stylesheet" media="only screen and (orientation: landscape)" href="../../CSS/landscapeStyle.css?nocache=1768526528533"/>
+    <link rel="stylesheet" media="only screen and (orientation: landscape)" href="../../CSS/landscapeStyle.css?nocache=1769285859392"/>
     
     <!-- Specific to page styling -->
-    <link rel="stylesheet" href="../../CSS/blogStyle.css?nocache=1768526528533"/>
-    <link rel="stylesheet" media="only screen and (orientation: portrait)" href="../../CSS/blogPortraitStyle.css?nocache=1768526528533"/>
+    <link rel="stylesheet" href="../../CSS/blogStyle.css?nocache=1769285859392"/>
+    <link rel="stylesheet" media="only screen and (orientation: portrait)" href="../../CSS/blogPortraitStyle.css?nocache=1769285859392"/>
 </head>
 <body>
     <header>
@@ -27,35 +27,69 @@
             </ul>
         </div>
     </header>
-        <div id="mainContainer">
-        <div id="category-links">
-            <h1>Categories</h1>
-            <ul><a href="/interests/blog/categories/rambling/index.html">Rambling</a><a href="/interests/blog/categories/webdev/index.html">Webdev</a></ul>
-        </div>
-        <div id="text-box">
-            <h1>Blog Posts</h1>
-            <ul><h2>I passed the CompTIA Security+ exam</h2>
-                    <h3>January 15, 2026</h3>
-                    <p>
-                        <p>Super hyped thats over with. My job paid me to go get the cert and it was stressing me out. I'm so happy to say I'm passed and can stop worrying about it.</p>
+    <div id="mainContainer">
+    <div id="category-links">
+        <h1>Categories</h1>
+        <ul><li>
+                    <a href="/interests/blog/categories/rambling/index.html">Rambling</a>
+                </li><li>
+                    <a href="/interests/blog/categories/webdev/index.html">Webdev</a>
+                </li></ul>
+    </div>
+    <div id="text-box">
+        <h1>Blog Posts</h1>
+        <ul><h2>I passed the CompTIA Security+ exam</h2>
+                <h3>January 15, 2026</h3>
+                <p>
+                    <p>Super hyped thats over with. My job paid me to go get the cert and it was stressing me out. I'm so happy to say I'm passed and can stop worrying about it.</p>
 
-                    </p>
-                    </br><h2>Somehow forgot I&#39;d need wires for my Raspberry Pi</h2>
-                    <h3>January 10, 2026</h3>
-                    <p>
-                        <p>Its gonna take around 2 weeks for all the cables and power supply stuff to show up. Until then there won't be a comment section. I think I had some of this stuff at my old home but must've forgotten it or lost it because its not in the box with my raspberry pi. I definitely used the Pi for some small project years ago. Whoops! Oh well. In the meantime I'll look into fleshing out my music page I suppose. Looking forward to having everything streamable from there!</p>
+                </p>
+                <!-- TODO: Need some kind of unique identifier per post here -->
+                <section class="comments" data-post-id="/posts/2026/01/securityPlus.html">
+                    <h2>Comments</h2>
+                    <div class="comment-list"></div>
+                    <form class="comment-form">
+                        <input type="text" maxlength="40" class="comment-author" name="author" placeholder="Name" required />
+                        <textarea type="text" maxlength="600" class="comment-text" name="text" placeholder="600 characters max" required></textarea>
+                        <button class="comment-post" type="submit">Post</button>
+                    </form>
+                </section>
+                </br><h2>Somehow forgot I&#39;d need wires for my Raspberry Pi</h2>
+                <h3>January 10, 2026</h3>
+                <p>
+                    <p>Its gonna take around 2 weeks for all the cables and power supply stuff to show up. Until then there won't be a comment section. I think I had some of this stuff at my old home but must've forgotten it or lost it because its not in the box with my raspberry pi. I definitely used the Pi for some small project years ago. Whoops! Oh well. In the meantime I'll look into fleshing out my music page I suppose. Looking forward to having everything streamable from there!</p>
 
-                    </p>
-                    </br><h2>Comment Section Feature is going well</h2>
-                    <h3>January 9, 2026</h3>
-                    <p>
-                        <p>Hey ya'll, I'm getting close to having a proper comment section on my blog. I just need to move my server side files over to my raspberry pi and configure it a bit to get things going. Pretty soon as long as my place has power, you'll be able to post comments here! Typing that just made me realize I should probably find a way to cache the comments here so that already made comments are rendered client side maybe? This would be for if my raspberry pi went down... though tbh that might take up way too much space on NekoWeb's hosting service. idk something to think about. later</p>
+                </p>
+                <!-- TODO: Need some kind of unique identifier per post here -->
+                <section class="comments" data-post-id="/posts/2026/01/raspberryPi.html">
+                    <h2>Comments</h2>
+                    <div class="comment-list"></div>
+                    <form class="comment-form">
+                        <input type="text" maxlength="40" class="comment-author" name="author" placeholder="Name" required />
+                        <textarea type="text" maxlength="600" class="comment-text" name="text" placeholder="600 characters max" required></textarea>
+                        <button class="comment-post" type="submit">Post</button>
+                    </form>
+                </section>
+                </br><h2>Comment Section Feature is going well</h2>
+                <h3>January 9, 2026</h3>
+                <p>
+                    <p>Hey ya'll, I'm getting close to having a proper comment section on my blog. I just need to move my server side files over to my raspberry pi and configure it a bit to get things going. Pretty soon as long as my place has power, you'll be able to post comments here! Typing that just made me realize I should probably find a way to cache the comments here so that already made comments are rendered client side maybe? This would be for if my raspberry pi went down... though tbh that might take up way too much space on NekoWeb's hosting service. idk something to think about. later</p>
 
-                    </p>
-                    </br><h2>Just found out about deploy2nekoweb</h2>
-                    <h3>December 28, 2025</h3>
-                    <p>
-                        <p>So I was under the impression that if I wanted to update my site immediately without importing a zip everytime I'd need to use nekoGit and subscribe monthly. Turns out theres an API with all sorts of nice features. That means I can post like this and have the post up in a matter of minutes. Thank god. Oh also dont forget to subscribe to my RSS feed, so you can see quality content like this.</p>
+                </p>
+                <!-- TODO: Need some kind of unique identifier per post here -->
+                <section class="comments" data-post-id="/posts/2026/01/webDevUpdate2.html">
+                    <h2>Comments</h2>
+                    <div class="comment-list"></div>
+                    <form class="comment-form">
+                        <input type="text" maxlength="40" class="comment-author" name="author" placeholder="Name" required />
+                        <textarea type="text" maxlength="600" class="comment-text" name="text" placeholder="600 characters max" required></textarea>
+                        <button class="comment-post" type="submit">Post</button>
+                    </form>
+                </section>
+                </br><h2>Just found out about deploy2nekoweb</h2>
+                <h3>December 28, 2025</h3>
+                <p>
+                    <p>So I was under the impression that if I wanted to update my site immediately without importing a zip everytime I'd need to use nekoGit and subscribe monthly. Turns out theres an API with all sorts of nice features. That means I can post like this and have the post up in a matter of minutes. Thank god. Oh also dont forget to subscribe to my RSS feed, so you can see quality content like this.</p>
 
                 </p>
                 <!-- TODO: Need some kind of unique identifier per post here -->

@@ -9,8 +9,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 // TODO Change for production
-// const API_BASE = Raspberry Pi IP address/comments
-const API_BASE = "http://127.0.0.1:5000";
+// const API_BASE = tailScale VPN
+const API_BASE = "https://raspberrypi.tailb5c308.ts.net";
 /* reusable Comment Render function */
 function renderComments(comment_list, comments) {
     if (comments.length === 0) {
