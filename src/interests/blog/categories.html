@@ -19,52 +19,24 @@ pageNesting: ../../../../
     <div id="text-box">
       {% set posts = collections.post | filterByCategory(category) %}
       <ul>
-        {%- for post in posts| reverse -%}
+        {%- for post in posts | reverse -%}
             <h2>{{ post.data.title }}</h2>
             <h3>{{ post.date | readableDateTime }}</h3>
             <p>
                 {% excerpt post %}
             </p>
-            <section id="comments">
-              <h2>Comments</h2>
-              <div id="comment-list"></div>
-              <form id="comment-form">
-                  <input name="author" placeholder="Name" required />
-                  <textarea name="text" required></textarea>
-                  <button type="submit">Post</button>
-              </form>
-            </section>
-            </br>
-            <script>
-              // TODO Change for production
-              const API_BASE = "http://127.0.0.1:5000";
-              // const API_BASE = Raspberry Pi IP address/comments
-              const postId = window.location.pathname;
-
-              fetch(`${API_BASE}/comments?post=${postId}`)
-              .then(r => r.json())
-              .then(comments => {
-                  document.getElementById("comment-list").innerHTML =
-                  comments.map(c => `<p><b>${c.author}</b>: ${c.text}</p>`).join("");
-              });
-
-              document.getElementById("comment-form").addEventListener("submit", async e => {
-              e.preventDefault();
-              const form = e.target;
-
-              await fetch(`${API_BASE}/comments`, {
-                  method: "POST",
-                  headers: {"Content-Type": "application/json"},
-                  body: JSON.stringify({
-                  post: postId,
-                  author: form.author.value,
-                  text: form.text.value
-                  })
-              });
-              location.reload();
-              });
-            </script>
+            <section class="comments" data-post-id="{{ post.url }}">
+                    <h2>Comments</h2>
+                    <div class="comment-list"></div>
+                    <form class="comment-form">
+                        <input type="text" maxlength="40" class="comment-author" name="author" placeholder="Name" required />
+                        <textarea type="text" maxlength="600" class="comment-text" name="text" placeholder="600 characters max" required></textarea>
+                        <button class="comment-post" type="submit">Post</button>
+                    </form>
+                </section>
+                </br>
         {%- endfor -%}
       </ul>
     </div>
 </div>
+<script src="../../scripts/javaScript/blogComments.js"></script>
