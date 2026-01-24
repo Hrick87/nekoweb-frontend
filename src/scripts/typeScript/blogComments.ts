@@ -11,15 +11,22 @@ interface Blog_Comment {
     text: string;
 }
 
+/* protect against XSS */
+function escapeHtml(text: string): string {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+}
+
 /* reusable Comment Render function */
 function renderComments(comment_list: HTMLElement, comments: Blog_Comment[]): void {
-        if (comments.length === 0) {
-                comment_list.innerHTML = "<p>No comments yet. Be the first to comment!</p>";
-        } else {
-            comment_list.innerHTML =
-                comments.map((blog_comment_element : Blog_Comment): string => 
-                `<p><b>${blog_comment_element.author}</b></br> ${blog_comment_element.text}</p>`).join("");
-        }
+    if (comments.length === 0) {
+        comment_list.innerHTML = "<p>No comments yet. Be the first to comment!</p>";
+    } else {
+        comment_list.innerHTML = comments.map((blog_comment_element: Blog_Comment): string => 
+            `<p><b>${escapeHtml(blog_comment_element.author)}</b><br> ${escapeHtml(blog_comment_element.text)}</p>`
+        ).join("");
+    }
 }
 
 document.querySelectorAll<HTMLElement>(".comments").forEach(section => {

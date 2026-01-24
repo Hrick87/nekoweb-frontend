@@ -11,14 +11,19 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 // TODO Change for production
 // const API_BASE = tailScale VPN
 const API_BASE = "https://raspberrypi.tailb5c308.ts.net";
+/* protect against XSS */
+function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+}
 /* reusable Comment Render function */
 function renderComments(comment_list, comments) {
     if (comments.length === 0) {
         comment_list.innerHTML = "<p>No comments yet. Be the first to comment!</p>";
     }
     else {
-        comment_list.innerHTML =
-            comments.map((blog_comment_element) => `<p><b>${blog_comment_element.author}</b></br> ${blog_comment_element.text}</p>`).join("");
+        comment_list.innerHTML = comments.map((blog_comment_element) => `<p><b>${escapeHtml(blog_comment_element.author)}</b><br> ${escapeHtml(blog_comment_element.text)}</p>`).join("");
     }
 }
 document.querySelectorAll(".comments").forEach(section => {
