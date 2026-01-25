@@ -1,0 +1,37 @@
+#navigationBar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    width: 100vw;              /* Full viewport width */
+    background-color: #0e182193;
+
+    display: flex;
+    flex-direction: column;    /* Stack vertically */
+    align-items: center;       /* Center text horizontally */
+
+    /* Vertical fade mask */
+    -webkit-mask-image: none;
+    mask-image: none;
+}
+
+#navigationBar li {
+    width: 100%;               /* Each row spans full width */
+}
+
+#navigationBar a {
+    display: block;
+    width: 100vw;              /* Full clickable width */
+    text-align: center;        /* Center text */
+
+    font-size: 4vw;            /* Bigger for vertical layout */
+    color: white;
+
+    padding: 2vh 0;            /* Tall vertical padding */
+    text-decoration: none;
+}
+
+#navigationBar a:hover {
+    background-color: hwb(199 47% 23%);
+    color: black;
+}

@@ -8,6 +8,7 @@
     },
     "scripts": {
         "serve": "cd src/scripts && tsc && cd ../.. && npx @11ty/eleventy --serve",
-        "build": "cd src/scripts && tsc && cd ../.. && npx @11ty/eleventy"
+        "build": "cd src/scripts && tsc && cd ../.. && npx @11ty/eleventy",
+        "just11ty":  "npx @11ty/eleventy --serve"
     }
 }

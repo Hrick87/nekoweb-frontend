@@ -7,14 +7,14 @@
     <title>For Your Eyes Only</title>
     
     <!-- General styling-->
-    <link rel="stylesheet" href="{{ CSSNesting }}style.css{{ nocache }}"/>
+    <link rel="stylesheet" href="{{ CSSNesting }}globalStyle.css{{ nocache }}"/>
     <!-- Mobile portrait mode only-->
-    <link rel="stylesheet" media="only screen and (orientation: portrait)" href="{{ CSSNesting }}portraitStyle.css{{ nocache }}"/>
-    <!-- Mobile landscape mode only-->
-    <link rel="stylesheet" media="only screen and (orientation: landscape)" href="{{ CSSNesting }}landscapeStyle.css{{ nocache }}"/>
+    <link rel="stylesheet" media="only screen and (orientation: portrait)" href="{{ CSSNesting }}globalPortraitStyle.css{{ nocache }}"/>
     
     <!-- Specific to page styling -->
-    <link rel="stylesheet" href="{{ CSSNesting }}{{pageName}}Style.css{{ nocache }}"/>
+    <!-- Landscape -->
+    <link rel="stylesheet" media="only screen and (orientation: landscape)" href="{{ CSSNesting }}{{pageName}}Style.css{{ nocache }}"/>
+    <!-- Portrait -->
     <link rel="stylesheet" media="only screen and (orientation: portrait)" href="{{ CSSNesting }}{{pageName}}PortraitStyle.css{{ nocache }}"/>
 </head>
 <body>

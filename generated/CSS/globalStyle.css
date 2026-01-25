@@ -1,0 +1,101 @@
+#navigationBar {
+    margin: 0;  /* keeps navbar at top of screen */
+    padding: 0;
+    background-color: #0e1821;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    list-style: none; /* Removes bullet points */
+    /* Strong fade edges */
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%),
+                        linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
+    -webkit-mask-composite: destination-in;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%),
+                 linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
+    mask-composite: intersect;
+}
+
+#navigationBar a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 30vw;
+    font-size: 1.5vw;
+    color: white;
+    text-decoration: none;
+}
+
+#navigationBar a:hover {
+    background-color: hwb(199 47% 23%);
+    color: black;
+}
+
+input[type="text"] {
+    font-size: 1.25em;
+    padding: 0.5em;
+}
+
+textarea[type="text"] {
+    padding: 0.5em;
+    font-size: 1.5em;
+    resize: none;
+}
+
+.comments .comment-list {
+    margin-top: .5em;
+    max-height: 30vh;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.756);
+    color: rgb(198, 198, 198);
+    border-radius: 10px;
+    padding: .25em;
+    padding-left: 1em;
+    padding-right: 1em;
+    line-height: 1.5em;
+}
+
+.comments .comment-form {
+    border-radius: 10px;
+    display: flex;
+    margin-top: 2em;
+    flex-direction: column;
+    align-items: left;
+    background-color: rgba(0, 0, 0, 0.756);
+    padding: 1.5em;
+    width: auto;
+}
+
+.comments .comment-author {
+    border-radius: 10px;
+    border: 0px;
+    height: auto;
+    background-color: rgb(31, 26, 26);
+    color:rgb(187, 187, 187);
+    margin-bottom: .5em;
+    width: 40%;
+}
+
+.comments .comment-text {
+    border-radius: 10px;
+    border: 0px;
+    background-color: rgb(31, 26, 26);
+    color:rgb(187, 187, 187);
+    height: 5em;
+    margin-bottom: .5em;
+    width: auto;
+}
+
+.comments .comment-post {
+    border-radius: 10px;
+    border: 0px;
+    background-color: rgb(31, 26, 26);
+    color:rgb(187, 187, 187);
+    font-weight: bold;
+    width: 30%;
+    font-size: 1.25em;
+    height: auto;
+}
+
+body {
+    font-family: Lucida Console;
+}
