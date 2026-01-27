@@ -1,0 +1,95 @@
+/* using this to center the actual grid container itself */
+body {
+    background-image: url('../graphics/japan.gif');
+    background-size: cover;       /* Scale image to cover entire window */
+    background-repeat: repeat;
+    background-position: center;  /* Center the image */
+    margin: 0;                    /* Remove default body margin */
+    height: 100vh;                /* Ensure body fills viewport height */
+}
+
+#mainContainer {
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-items: stretch;
+    min-height: 90vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.727);  /* semi-transparent black */
+    color: rgb(198, 198, 198);    /* Text color */
+}
+
+#category-links {
+    padding-top: 1.0em;                  /* space inside the box */
+    padding-bottom: .25em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+#category-links h1 {
+    margin: 0;
+    font-size: 4vh;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+#category-links ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+#category-links a {
+    color: rgb(182, 182, 182); /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+#text-box {
+    height: 75vh;
+    overflow: scroll;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    text-align: left;
+    padding-left: 1.25rem; /* makes up for scroll bars extra padding */
+    padding-right: 1rem;
+    line-height: 1.1;
+    font-size: 2.25vh;
+}
+
+#text-box ul {
+    margin-top: 0;
+    padding: 0;
+}
+
+#text-box h1 {
+    text-align: center;
+    font-size: 4vh;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+#text-box h2 {
+    color: rgb(174, 12, 44);
+    font-size: 3.25vh;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#text-box h3 {
+    color: rgb(123, 8, 31);
+    font-size: 2.75vh;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#text-box p {
+    margin-top: 0;
+}
