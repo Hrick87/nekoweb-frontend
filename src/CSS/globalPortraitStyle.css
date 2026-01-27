@@ -2,17 +2,11 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
-
     width: 100vw;              /* Full viewport width */
     background-color: #0e182193;
-
     display: flex;
     flex-direction: column;    /* Stack vertically */
     align-items: center;       /* Center text horizontally */
-
-    /* Vertical fade mask */
-    -webkit-mask-image: none;
-    mask-image: none;
 }
 
 #navigationBar li {
@@ -34,4 +28,73 @@
 #navigationBar a:hover {
     background-color: hwb(199 47% 23%);
     color: black;
+}
+
+input[type="text"] {
+    font-size: 1.25em;
+    padding: 0.5em;
+}
+
+textarea[type="text"] {
+    padding: 0.5em;
+    font-size: 1.5em;
+    resize: none;
+}
+
+.comments .comment-list {
+    margin-top: .5em;
+    max-height: 30vh;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.756);
+    color: rgb(198, 198, 198);
+    border-radius: 10px;
+    padding: .25em;
+    padding-left: 1em;
+    padding-right: 1em;
+    line-height: 1.5em;
+}
+
+.comments .comment-form {
+    border-radius: 10px;
+    display: flex;
+    margin-top: 0;
+    flex-direction: column;
+    align-items: left;
+    background-color: rgba(0, 0, 0, 0.756);
+    width: auto;
+}
+
+.comments .comment-author {
+    border-radius: 10px;
+    border: 0px;
+    height: auto;
+    background-color: rgb(31, 26, 26);
+    color:rgb(187, 187, 187);
+    margin-bottom: .5em;
+    width: 40%;
+}
+
+.comments .comment-text {
+    border-radius: 10px;
+    border: 0px;
+    background-color: rgb(31, 26, 26);
+    color:rgb(187, 187, 187);
+    height: 5em;
+    margin-bottom: .5em;
+    width: auto;
+}
+
+.comments .comment-post {
+    border-radius: 10px;
+    border: 0px;
+    background-color: rgb(31, 26, 26);
+    color:rgb(187, 187, 187);
+    font-weight: bold;
+    width: 30%;
+    font-size: 1.25em;
+    height: auto;
+}
+
+body {
+    font-family: Lucida Console;
 }
