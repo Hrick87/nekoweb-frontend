@@ -13,8 +13,8 @@
     display: flex;
     justify-content: center;
     justify-items: center;
-    width: 100%;
-    height: 15rem;
+    width: 50vw;
+    height: 27vh;
 }
 
 /* gives image a gradient */

@@ -1,0 +1,135 @@
+/* centers all child content */
+.mainContainer {
+    border-radius: 12px;
+    font-size: 1.25em;
+    display: flex;
+    justify-items: stretch;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.727);  /* semi-transparent black */
+    color: rgb(198, 198, 198);    /* Text color */
+}
+
+/* centers text box */
+.text-box {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+/* centers title */
+.text-box h1 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    font-size: 4vh;
+}
+
+/* centers title */
+.text-box h2 {
+    text-align: left;
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+    font-size: 3.25vh;
+    color: rgb(174, 12, 44)
+}
+
+/* centers title */
+.text-box h3 {
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: rgb(123, 8, 31);
+    font-size: 2.75vh;
+}
+
+.link-box {
+    display: flex;
+}
+
+.link-box a {
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(198, 198, 198);    /* Text color */
+    font-size: .75rem;
+}
+
+.link-box li {
+    border: 2px solid rgb(123, 8, 31)  
+}
+
+.link-box li:hover {
+    background-color: rgb(123, 8, 31);
+}
+
+.sub-text-box {
+    display: flex;
+    gap: 0.5rem;
+}
+
+#vaunt1 a {
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(198, 198, 198);    /* Text color */
+    font-size: .75rem;
+}
+
+#vaunt1 li {
+    border: 2px solid rgb(123, 8, 31)  
+}
+
+#vaunt1 li:hover {
+    background-color: rgb(123, 8, 31);
+}
+
+#vaunt2 a {
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(198, 198, 198);    /* Text color */
+    font-size: .75rem;
+}
+
+#vaunt2 li {
+    border: 2px solid rgb(123, 8, 31)  
+}
+
+#vaunt2 li:hover {
+    background-color: rgb(123, 8, 31);
+}
+
+h4 {
+    text-align: left;
+    color: white;
+    font-size: 2.25vh;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul {
+    text-align: left;
+    margin-top: 0; /* get rid of space between each section and its paragraph */
+    line-height: 1.1;
+    list-style: none;
+    padding: 0;
+}
+
+.text-box p {
+    text-align: left;
+    margin-top: 0; /* get rid of space between each section and its paragraph */
+    line-height: 1.1;
+    font-size: 2.25vh;
+}
+
+/* Background Image */
+body {
+    background-image: url('../graphics/japan.gif');
+    background-size: cover;       /* Scale image to cover entire window */
+    background-repeat: repeat;    /* tiling for scroll bar */
+    background-position: center;  /* Center the image */
+    margin: 0;                    /* Remove default body margin */
+    height: 100vh;                /* Ensure body fills viewport height */
+}
