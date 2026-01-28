@@ -4,12 +4,21 @@
   <subtitle></subtitle>
   <link href="https://foryoureyesonly.nekoweb.org/feed.xml" rel="self"/>
   <link href="https://foryoureyesonly.nekoweb.org/"/>
-  <updated>2026-01-15T00:00:00Z</updated>
+  <updated>2026-01-27T00:00:00Z</updated>
   <id>https://foryoureyesonly.nekoweb.org/</id>
   <author>
     <name>Hunter</name>
     <email></email>
   </author>
+  
+  <entry>
+    <title>Comment Section is live!</title>
+    <link href="https://foryoureyesonly.nekoweb.org/posts/2026/01/commentSection.html"/>
+    <updated>2026-01-27T00:00:00Z</updated>
+    <id>https://foryoureyesonly.nekoweb.org/posts/2026/01/commentSection.html</id>
+    <content type="html">&lt;p&gt;My server is all set up and I&#39;ve got my comment section fully locally hosted. I&#39;ve opted for self hosting to avoid having a reliance on a thirdparty company. It&#39;s also much cheaper! If anyone out there on the indie web wants to know how I did it, drop me a comment here or email me. I kept things as simple as possible while still opting for security best practices. If I get enough people asking, I&#39;ll consider adding a tutorial to my site. I&#39;m always happy to bring one more person closer to decentralizing the web.&lt;/p&gt;
+</content>
+  </entry>
   
   <entry>
     <title>I passed the CompTIA Security+ exam</title>
